@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Detalhes do Caso">
+    <div class="slds-p-around_medium">
+      <template if:true={slaDeadline}>
+        <p><strong>SLA Deadline:</strong> {formattedDeadline}</p>
+        <p><strong>Tempo restante:</strong> {countdown}</p>
+      </template>
+
+      <lightning-button
+        label="Reabrir Caso"
+        onclick={handleReopen}
+        variant="brand"
+        class="slds-m-top_medium">
+      </lightning-button>
+    </div>
+  </lightning-card>
+</template>
